@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio and selected projects.">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#" class="logo">Portfolio<span>.</span></a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="admin.html" class="admin-link">Admin ↗</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="eyebrow">WELCOME TO MY PORTFOLIO</span>
+      <h1>Hi, I'm <span id="profile-name">Loading...</span></h1>
+      <h2 id="profile-title">Loading profile...</h2>
+      <p id="profile-bio">Please wait while my profile loads.</p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Explore Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+
+      <div class="social-links">
+        <a id="github-link" href="#" target="_blank" rel="noopener noreferrer" hidden>GitHub ↗</a>
+        <a id="linkedin-link" href="#" target="_blank" rel="noopener noreferrer" hidden>LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img id="profile-avatar"
+        src="https://placehold.co/400x400"
+        alt="Profile portrait">
+    </div>
+  </section>
+
+  <section class="projects-section" id="projects">
+    <div class="section-heading">
+      <span class="eyebrow">MY WORK</span>
+      <h2>Featured Projects<span>.</span></h2>
+      <p>A selection of my recent work and personal projects.</p>
+    </div>
+
+    <div class="project-toolbar">
+      <input
+        type="search"
+        id="project-search"
+        placeholder="Search projects..."
+        aria-label="Search projects">
+
+      <div id="category-filters" class="filters">
+        <button class="filter-btn active" data-category="all">All</button>
+      </div>
+    </div>
+
+    <div id="projects-grid" class="projects-grid">
+      <p class="loading-message">Loading projects...</p>
+    </div>
+
+    <p id="project-status" class="status-message" aria-live="polite"></p>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <span class="eyebrow">GET IN TOUCH</span>
+    <h2>Let's Work Together.</h2>
+    <p>Interested in working together? Connect with me through my social profiles.</p>
+    <div class="social-links">
+      <a id="contact-github" href="#" target="_blank" rel="noopener noreferrer" hidden>GitHub ↗</a>
+      <a id="contact-linkedin" href="#" target="_blank" rel="noopener noreferrer" hidden>LinkedIn ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="current-year"></span> <span id="footer-name">My Portfolio</span>. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+

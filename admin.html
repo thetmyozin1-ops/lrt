@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js" defer></script>
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <a href="index.html" class="logo">Portfolio<span>.</span></a>
+  <a href="index.html">← View Website</a>
+</header>
+
+<main>
+  <section id="login-section" class="login-container">
+    <div class="admin-card">
+      <span class="eyebrow">ADMIN ACCESS</span>
+      <h2>Welcome Back</h2>
+      <p style="color:var(--muted);margin-bottom:20px">
+        Sign in to manage your portfolio.
+      </p>
+
+      <form id="login-form" class="admin-form">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input id="login-email" type="email"
+            placeholder="admin@example.com" required autocomplete="username">
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password"
+            placeholder="Enter password" required autocomplete="current-password">
+        </div>
+
+        <button class="admin-button" id="login-button" type="submit">
+          Sign In
+        </button>
+      </form>
+
+      <div id="login-message" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="dashboard-section" class="admin-container hidden">
+    <div class="admin-heading">
+      <span class="eyebrow">CONTROL PANEL</span>
+      <h1>Admin Dashboard</h1>
+      <p>Manage your personal portfolio and projects.</p>
+    </div>
+
+    <div class="admin-card">
+      <h2>Personal Information</h2>
+
+      <form id="profile-form" class="admin-form">
+        <div class="form-group">
+          <label for="edit-name">Full Name</label>
+          <input id="edit-name" type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-title">Professional Title</label>
+          <input id="edit-title" type="text"
+            placeholder="Full Stack Developer">
+        </div>
+
+        <div class="form-group">
+          <label for="edit-bio">Biography</label>
+          <textarea id="edit-bio" rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="edit-avatar">Avatar Image URL</label>
+          <input id="edit-avatar" type="url"
+            placeholder="https://example.com/photo.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="edit-github">GitHub URL</label>
+          <input id="edit-github" type="url"
+            placeholder="https://github.com/username">
+        </div>
+
+        <div class="form-group">
+          <label for="edit-linkedin">LinkedIn URL</label>
+          <input id="edit-linkedin" type="url"
+            placeholder="https://linkedin.com/in/username">
+        </div>
+
+        <button class="admin-button" id="profile-button" type="submit">
+          Update Profile
+        </button>
+      </form>
+
+      <div id="profile-message" aria-live="polite"></div>
+    </div>
+
+    <div class="admin-card">
+      <h2>Add New Project</h2>
+
+      <form id="project-form" class="admin-form">
+        <div class="form-group">
+          <label for="project-title">Project Title</label>
+          <input id="project-title" type="text"
+            placeholder="My Portfolio Website" required>
+        </div>
+
+        <div class="form-group">
+          <label for="project-description">Description</label>
+          <textarea id="project-description"
+            placeholder="Describe your project..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="project-image">Project Image URL</label>
+          <input id="project-image" type="url"
+            placeholder="https://example.com/image.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="project-link">Project URL</label>
+          <input id="project-link" type="url"
+            placeholder="https://example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="project-tags">Categories / Tags</label>
+          <input id="project-tags" type="text"
+            placeholder="HTML, CSS, JavaScript">
+        </div>
+
+        <button class="admin-button" id="project-button" type="submit">
+          + Add Project
+        </button>
+      </form>
+
+      <div id="project-message" aria-live="polite"></div>
+    </div>
+
+    <div class="admin-card">
+      <h2>Manage Projects</h2>
+      <div id="admin-project-list" class="project-admin-list">
+        Loading projects...
+      </div>
+    </div>
+
+    <button class="admin-button delete-button" id="logout-button">
+      Sign Out
+    </button>
+  </section>
+</main>
+
+</body>
+</html>
