@@ -1,9 +1,9 @@
 
 const SUPABASE_URL = "https://rmlvpvxwctmrppecjeyz.supabase.co";
-const SUPABASE_KEY = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+const SUPABASE_KEY = "sb_publishable_athZmy20q0-0QQ0KLzGy7g_gUV8QBR0";
 
 // Replace with your Supabase Authentication user UUID.
-const ADMIN_USER_ID = "PASTE_YOUR_ADMIN_USER_UUID_HERE";
+const ADMIN_USER_ID = "277aebeb-cfab-4d29-a18b-c90688fdda6e";
 
 const { createClient } = supabase;
 const db = createClient(SUPABASE_URL, SUPABASE_KEY);
